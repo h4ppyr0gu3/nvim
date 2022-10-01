@@ -45,6 +45,30 @@ return require('packer').startup(function(use)
     },
   })
 
+  -- TODO: comments
+  use {
+    'folke/todo-comments.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function()
+      require('todo-comments').setup {}
+    end
+  }
+
+  -- Trouble
+  use {
+    'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+    config = function()
+      require('trouble').setup {}
+    end
+  }
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
   if packer_bootstrap then
     require('packer').sync()
   end
