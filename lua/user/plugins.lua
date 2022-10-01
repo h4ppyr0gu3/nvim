@@ -34,6 +34,9 @@ return require('packer').startup(function(use)
   -- Languages
   use 'stefanos82/nelua.vim'
 
+  -- Status bar
+  use 'vim-airline/vim-airline'
+
   if packer_bootstrap then
     require('packer').sync()
   end
