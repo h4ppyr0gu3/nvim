@@ -37,6 +37,14 @@ return require('packer').startup(function(use)
   -- Status bar
   use 'vim-airline/vim-airline'
 
+  -- Tabs
+  use ({
+    'romgrk/barbar.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+    },
+  })
+
   if packer_bootstrap then
     require('packer').sync()
   end
