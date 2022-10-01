@@ -1,0 +1,5 @@
+vim.cmd('set number relativenumber')
+vim.cmd('set clipboard=unnamedplus')
+vim.cmd('set expandtab shiftwidth=2')
+vim.cmd('set list listchars=tab:▸▸,trail:·')
+vim.cmd('set mouse=a')
