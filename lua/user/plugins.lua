@@ -79,6 +79,9 @@ return require('packer').startup(function(use)
   use "preservim/vim-wheel"
   use "preservim/vim-wordy"
 
+  -- Multiple cursors
+  use 'mg979/vim-visual-multi'
+
   -- Have startup dashboard
   use 'goolord/alpha-nvim'
   if packer_bootstrap then
