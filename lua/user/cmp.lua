@@ -67,6 +67,13 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- require('lspconfig').<SERVER-HERE>.setup { capabilities = capabilities }
 
 require('lspconfig').html.setup { capabilities = capabilities }
-require('lspconfig').luau_lsp.setup { capabilities = capabilities }
 require('lspconfig').clangd.setup { capabilities = capabilities }
-
+require('lspconfig').sumneko_lua.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {'vim'},
+      }
+    }
+  }
+}
