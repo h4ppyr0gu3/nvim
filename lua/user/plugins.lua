@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
   use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
 
   -- Setup project (a way to navigate projects)
-  use { 'ahmedkhalf/project.nvim', config = function() require("project_nvim").setup {} end }
+  use { 'ahmedkhalf/project.nvim', config = function() require("project_nvim").setup { patterns = {".git", "Makefile", "package.json", "Gemfile", ".prj", "Cargo.toml" } } end }
 
   -- Setup illuminate
   use 'RRethy/vim-illuminate'
