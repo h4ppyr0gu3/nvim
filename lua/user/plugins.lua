@@ -95,7 +95,10 @@ return require('packer').startup(function(use)
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
   })
-  
+
+  -- Autocorrect
+  use "TeaSpillStudios/AbbrevMan.nvim"
+
   -- Have startup dashboard
   use 'goolord/alpha-nvim'
   if packer_bootstrap then
