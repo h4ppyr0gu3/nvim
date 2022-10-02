@@ -9,7 +9,6 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.cursorline = true
 vim.opt.ignorecase = true
-vim.opt.hlsearch = true
 
 vim.cmd('set list listchars=tab:··,trail:·')
 
