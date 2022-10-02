@@ -42,51 +42,22 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline'
 
   -- Tabs
-  use ({
-    'romgrk/barbar.nvim',
-    requires = {
-      'kyazdani42/nvim-web-devicons',
-    },
-  })
+  use ({ 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } })
 
   -- TODO: comments
-  use {
-    'folke/todo-comments.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-    config = function()
-      require('todo-comments').setup {}
-    end
-  }
+  use { 'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim', config = function() require('todo-comments').setup {} end }
 
   -- Trouble
-  use {
-    'folke/trouble.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('trouble').setup {}
-    end
-  }
+  use { 'folke/trouble.nvim', requires = 'kyazdani42/nvim-web-devicons', config = function() require('trouble').setup {} end }
 
   -- Lazy git
   use 'kdheepak/lazygit.nvim'
 
   -- Telescope
-  use ({
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} },
-
-    config = function()
-      require("telescope").load_extension("lazygit")
-    end,
-  })
+  use ({ 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} }, config = function() require("telescope").load_extension("lazygit") end })
 
   -- Show information of modifications in git repositories
-  use {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  use { 'lewis6991/gitsigns.nvim', config = function() require('gitsigns').setup() end }
 
   -- Setup autopairs
   use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
