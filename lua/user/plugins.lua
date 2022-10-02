@@ -90,6 +90,12 @@ return require('packer').startup(function(use)
   -- Setup illuminate
   use 'RRethy/vim-illuminate'
 
+  -- Setup MD file syntax highlighting
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  
   -- Have startup dashboard
   use 'goolord/alpha-nvim'
   if packer_bootstrap then
