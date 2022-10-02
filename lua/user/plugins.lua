@@ -67,11 +67,18 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Lazy git
+  use 'kdheepak/lazygit.nvim'
+
   -- Telescope
-  use {
+  use ({
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    requires = { {'nvim-lua/plenary.nvim'} },
+
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  })
 
   -- Show information of modifications in git repositories
   use {
@@ -103,7 +110,6 @@ return require('packer').startup(function(use)
   use "preservim/vim-pencil"
   use "preservim/vim-wheel"
   use "preservim/vim-wordy"
-  use "vim-wordchipper"
 
   -- Have startup dashboard
   use 'goolord/alpha-nvim'
