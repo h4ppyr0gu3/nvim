@@ -3,6 +3,11 @@ vim.opt.number = true
 vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.expandtab = true
+vim.opt.undofile = true
+vim.opt.updatetime = 300
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.cursorline = true
 
 vim.cmd('set list listchars=tab:··,trail:·')
 
