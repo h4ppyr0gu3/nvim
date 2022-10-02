@@ -87,6 +87,9 @@ return require('packer').startup(function(use)
   -- Setup project (a way to navigate projects)
   use { 'ahmedkhalf/project.nvim', config = function() require("project_nvim").setup {} end }
 
+  -- Setup illuminate
+  use 'RRethy/vim-illuminate'
+
   -- Have startup dashboard
   use 'goolord/alpha-nvim'
   if packer_bootstrap then
