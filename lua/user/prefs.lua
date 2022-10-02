@@ -24,6 +24,8 @@ vim.cmd('nnoremap <leader>fg <cmd>Telescope live_grep<cr>')
 vim.cmd('nnoremap <leader>fb <cmd>Telescope buffers<cr>')
 vim.cmd('nnoremap <leader>fh <cmd>Telescope help_tags<cr>')
 
+vim.cmd('nnoremap <leader>t <cmd>TroubleToggle<cr>')
+
 -- Make escape cancel the recent most recent search
 vim.cmd('nnoremap <esc> :noh<return><esc>')
 
