@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Show information of modifications in git repositories
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
@@ -76,6 +77,14 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Setup autopairs
+  use { 'windwp/nvim-autopairs', config = function() require("nvim-autopairs").setup {} end }
+
+  -- Setup project (a way to navigate projects)
+  use { 'ahmedkhalf/project.nvim', config = function() require("project_nvim").setup {} end }
+
+  -- Have startup dashboard
+  use 'goolord/alpha-nvim'
   if packer_bootstrap then
     require('packer').sync()
   end
