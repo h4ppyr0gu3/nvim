@@ -17,6 +17,10 @@ vim.cmd('set completeopt=menu,menuone,noselect')
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  -- Speed up loading times with impatient.nvim
+  use 'lewis6991/impatient.nvim'
+  require('impatient')
+
   use 'arcticicestudio/nord-vim'
 
   -- CMP
