@@ -1,10 +1,14 @@
-vim.cmd('set number relativenumber')
-vim.cmd('set clipboard=unnamedplus')
-vim.cmd('set expandtab shiftwidth=2')
---vim.cmd('set list listchars=tab:▸▸,trail:·')
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.signcolumn = "yes"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.expandtab = true
+
 vim.cmd('set list listchars=tab:··,trail:·')
+
 vim.cmd('set mouse=a')
 vim.cmd('let mapleader=","')
+
 vim.cmd('nnoremap <leader><leader> :b#<CR>')
 
 -- Find files using Telescope command-line sugar.
