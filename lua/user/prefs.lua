@@ -60,5 +60,4 @@ dashboard.section.buttons.opts.hl = "Keyword"
 dashboard.opts.opts.noautocmd = true
 alpha.setup(dashboard.opts)
 
--- Integrate projects with telescope
 require('telescope').load_extension('projects')
