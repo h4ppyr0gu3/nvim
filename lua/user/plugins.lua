@@ -98,10 +98,7 @@ return require('packer').startup(function(use)
   use 'RRethy/vim-illuminate'
 
   -- Setup MD file syntax highlighting
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end })
 
   -- Writing
   use "TeaSpillStudios/AbbrevMan.nvim"
