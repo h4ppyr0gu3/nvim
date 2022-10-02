@@ -96,8 +96,14 @@ return require('packer').startup(function(use)
       run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  -- Autocorrect
+  -- Writing
   use "TeaSpillStudios/AbbrevMan.nvim"
+  use "preservim/vim-litecorrect"
+  use "preservim/vim-lexical"
+  use "preservim/vim-pencil"
+  use "preservim/vim-wheel"
+  use "preservim/vim-wordy"
+  use "vim-wordchipper"
 
   -- Have startup dashboard
   use 'goolord/alpha-nvim'

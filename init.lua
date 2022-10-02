@@ -1,4 +1,5 @@
 require "user.plugins"
+require "user.writing"
 require "user.cmp"
 require "user.prefs"
 require "user.wp"
